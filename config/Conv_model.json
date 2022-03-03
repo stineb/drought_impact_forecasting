@@ -1,0 +1,55 @@
+{
+    "model":
+    {
+        "dilation_rate": 1,
+        "anneal_start": 5,
+        "anneal_end": 10,
+        "channels": 11,
+        "u_net_channels": [11, 16, 32, 64, 64, 32, 16, 4],
+        "hidden_channels": [10, 4, 3],
+        "n_layers": 5,
+        "kernel": [3, 3],
+        "baseline": "last_frame",
+        "val_metric": "ENS",
+        "decay_point": 10
+    },
+    "loss":
+    {
+        "lambda_KL_factor": 0.001,
+        "lambda1": 100
+    },
+    "data":
+    {
+        "train_dir": "/Data/train/",
+        "test_dir": "/Data/test/",
+        "pickle_dir": "all_data",
+        "mesoscale_cut": [39, 41]
+    },
+    "training":
+    {
+        "offline": true,
+        "print_predictions": true,
+        "epochs": 5,
+        "start_learn_rate": 0.1,
+        "train_batch_size": 2,
+        "val_1_batch_size": 2,
+        "val_2_batch_size": 2,
+        "test_batch_size": 1,
+        "optimizer": "adam",
+        "seed": 1,
+        "training_samples": 4,
+        "val_1_samples": 2,
+        "val_2_samples": 4,
+        "num_workers": 0,
+        "accelerator": "auto",
+        "gpus": 1,
+        "devices": 1,
+        "log_steps": 50,
+        "patience": 5,
+        "use_context": true
+    },
+    "project":
+    {
+        "evaluate": true
+    }
+}

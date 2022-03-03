@@ -178,9 +178,6 @@ instance/
 # Sphinx documentation
 docs/_build/
 
-# PyBuilder
-target/
-
 # Jupyter Notebook
 .ipynb_checkpoints
 
@@ -210,3 +207,42 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# lightning logs directory
+/lightning_logs
+
+# VS code debugger
+/.vscode
+
+# wandb
+!wandb/
+
+wandb/*
+!wandb/run-20220116_075903-ofhmef7b/
+!wandb/run-20220116_075903-ofhmef7b/files/
+!wandb/run-20220116_075903-ofhmef7b/files/*
+
+/DS_Lab
+
+# Data folder (only push prediction scores)
+!Data/
+
+Data/*
+!Data/iid/
+!Data/ood/
+
+# Models
+/model_instances
+
+# Images
+*.png
+*.jpg
+
+# Script files
+/drought_impact_forecasting-scripts
+
+# Ensemble scores
+/scripts/Ensemble_score
+
+# Predictions
+/Predictions
